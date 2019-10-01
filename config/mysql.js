@@ -15,7 +15,7 @@ module.exports = {
             'host': 'localhost',
             'user': 'root',
             'password': '', // husk at angive et kodeord hvis din SQL server kræver det
-            'database': 'todo_app'
+            'database': 'portfolio'
         });
     }
 };

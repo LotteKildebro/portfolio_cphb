@@ -1,7 +1,7 @@
 {
-  "name": "restful-todo-app-david-jrh",
+  "name": "portfolio_cphb",
   "version": "1.0.0",
-  "description": "todo app",
+  "description": "portfolio",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rts-cmk-WI81/restful-todo-app-David-jrh.git"
+    "url": "git+https://github.com/LotteKildebro/portfolio_cphb.git"
   },
   "keywords": [
     "api"
   ],
-  "author": "David Hjorth",
+  "author": "Lotte Kildebro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rts-cmk-WI81/restful-todo-app-David-jrh/issues"
+    "url": "https://github.com/LotteKildebro/portfolio_cphb/issues"
   },
-  "homepage": "https://github.com/rts-cmk-WI81/restful-todo-app-David-jrh#readme",
+  "homepage": "https://github.com/LotteKildebro/portfolio_cphb#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "morgan": "^1.9.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-ejs-extend": "0.0.1",
+    "morgan": "^1.9.1",
     "mysql2": "^1.5.2"
   },
   "devDependencies": {

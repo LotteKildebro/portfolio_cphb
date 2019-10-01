@@ -1,23 +1,37 @@
 
-
-const express = require('express'); // expres instans kan starte app
+// indlæs express
+const express = require('express');
 const app = express();
-//hvilken port API bruger
-const port = 3000;
+const fs = require('fs');
+const path = require('path');
 
-const logger = require('morgan');// henter morgan og putter den ned i en variable
-app.use(logger('dev')); //Sender besked tilbage til terminalen, hvis nogen benytter min localhost. Den giver også besked om fejl, hvis der bliver skrevet forkert i browseren.
-// vi siger til app at den skal bruges til logger
+// knyt morgan til som logger
+const logger = require('morgan');
+app.use(logger('dev'));
 
-const bodyParser = require('body-parser'); //tag imod bodyien i requesten
+// sæt view-engine op til at benytte ejs
+app.set('view engine', 'ejs'); // definer template engine
+app.set('views', './server/views'); // definerer hvor ejs filerne er placeret
+app.engine('ejs', require('express-ejs-extend')); // tillad extends i ejs templates
+
+// konfigurer bodyparser
+const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-// hent API routes
-require('./routes.js')(app);
-// siger hvilken mappe der skal bruges til de statiske filer
+//directory for routes filerne
+let directories = ['routes'];
+
+directories.forEach(directory => {
+    fs.readdirSync(path.join(__dirname, directory)).forEach(file => {
+        require(path.join(__dirname, directory, file))(app);
+    });
+});
+
+//express
 app.use(express.static('public'));
-
 
 app.listen(port, (err) => {
     if (err) {
