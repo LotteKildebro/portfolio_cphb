@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(248, 245, 245);
+}
+#wrapper {
+    margin: 0 auto;
+    width: 980px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+textarea {
+    width: 40%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+button{
+    background-color: rgb(24, 183, 204);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button {
+    display: inline-block;
+    background-color: rgb(25, 168, 204);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.data_wrapper {
+float: left;
+color: rgb(239, 241, 239);
+background-color: rgb(165, 170, 165);
+margin: 20px;
+width: 200px;
+height: 200px;
+padding: 20px;
+}

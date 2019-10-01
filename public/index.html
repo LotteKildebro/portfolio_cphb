@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="todo_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO DO APP</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="overskrift">
+            <h1>TO LISTE APP</h1>
+        </div>
+    </header>
+
+
+
+
+
+    <div id="border"></div>
+
+    <!-- "brugeren" kan skrive i denne kasse på sitet -->
+    <section>
+        <form>
+            <h2>Formularen</h2>
+            <p>
+                <label>Title:</label>
+                <input type="text" name="title" id="title">
+            </p>
+            <p>
+                <label>Indhold:</label>
+                <textarea name="indhold" id="indhold"></textarea>
+            </p>
+            <p>
+                <label>Afsluttet</label>
+                <input type="checkbox" name="afsluttet" value="1" id="afsluttet">
+            </p>
+        </form>
+        <button class="submit">Send</button>
+    </section>
+    <span id="fejlbesked"></span>
+
+    <div id="content"></div>
+
+    <!-- er det samme som et (link <>) bare for js -->
+
+
+
+    <div id="bottom_border"></div>
+
+    <footer></footer>
+
+    <script src="todoscript.js"></script>
+
+</body>
+
+</html>
